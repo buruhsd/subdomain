@@ -13,7 +13,7 @@
 
 
 
-Route::group(['domain' => '{username}.subdomaintes.test'], function()
+Route::group(['domain' => '{username}.bangkok.tuber.id'], function()
 {
   Route::get('/', function($username) {
     return 'Anda mengunjungi akun ' . $username;
