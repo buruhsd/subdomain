@@ -20,6 +20,13 @@ Route::group(['domain' => '{username}.'.env('APP_URL')], function()
   });
 });
 
+Route::group(['domain' => '{domain}'], function()
+{
+  Route::get('/', function($domain) {
+    return 'Anda mengunjungi akun ' . $domain . ' '. env('APP_URL');
+  });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
