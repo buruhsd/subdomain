@@ -13,12 +13,12 @@
 
 
 
-Route::group(['domain' => '{username}.'.env('APP_URL')], function()
-{
-  Route::get('/', function($username) {
-    return 'Anda mengunjungi akun ' . $username . ' '. env('APP_URL');
-  });
-});
+// Route::group(['domain' => '{username}.'.env('APP_URL')], function()
+// {
+//   Route::get('/', function($username) {
+//     return 'Anda mengunjungi akun ' . $username . ' '. env('APP_URL');
+//   });
+// });
 
 Route::group(['domain' => '{domain}'], function()
 {
