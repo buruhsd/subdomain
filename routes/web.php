@@ -20,16 +20,20 @@
 //   });
 // });
 
-Route::group(['domain' => '{domain}'], function()
-{
-  Route::get('/', function($domain) {
-    return 'Anda mengunjungi akun ' . $domain . ' '. env('APP_URL');
-  });
+// Route::group(['domain' => '{domain}'], function()
+// {
+//   Route::get('/', function($domain) {
+//     return 'Anda mengunjungi akun ' . $domain . ' '. env('APP_URL');
+//   });
+// });
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
